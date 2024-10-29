@@ -1,0 +1,9 @@
+-- icons
+https://ionic.io/ionicons/v4
+
+ make sure to update the following pkgs for avoinding any runtime error 
+npm i eslint@latest rimraf@latest glob@latest
+npm i vite@latest @ionic/react@latest ionicons@latest
+
+-- to run server 
+ionic serve

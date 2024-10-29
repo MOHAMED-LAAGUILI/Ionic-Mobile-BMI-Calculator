@@ -1,0 +1,7 @@
+{
+  "name": "ionic-react-01",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
