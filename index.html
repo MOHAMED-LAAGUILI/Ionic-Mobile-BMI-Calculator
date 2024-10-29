@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <ion-app>
+        <ion-menu side="start" content-id="main-content">
+            <ion-header>
+                <ion-toolbar color="primary" class="flex items-center">
+                    <ion-avatar>
+                        <img src="./Logo.jpg" alt="Logo" class="w-12 h-auto"/>
+                    </ion-avatar>
+                    <ion-title class="ml-2">BMI Calculator</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+                <ion-list>
+                    <ion-item>
+                        <ion-label>Developer Info</ion-label>
+                        <ion-button fill="clear" href="http://laaguili.epizy.com" target="_blank">Visit Profile</ion-button>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Contact Us</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>About the App</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+
+        <div class="ion-page" id="main-content">
+            <ion-header>
+                <ion-toolbar color="danger" class="flex items-center">
+                    <ion-title>BMI Calculator</ion-title>
+                    <ion-buttons slot="end">
+                        <ion-menu-button></ion-menu-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+                <ion-item class="mb-4">
+                    <ion-input id="height" label="Height (cm)" label-placement="floating" fill="outline" type="number" placeholder="Enter height"></ion-input>
+                </ion-item>
+
+                <ion-item class="mb-4">
+                    <ion-input id="weight" label="Weight (kg)" label-placement="floating" fill="outline" type="number" placeholder="Enter weight"></ion-input>
+                </ion-item>
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button shape="round" fill="outline" id="calculate-btn" class="w-full">
+                                <ion-icon slot="start" name="calculator-outline"></ion-icon>
+                                Calculate
+                            </ion-button>
+                        </ion-col>
+                        <ion-col>
+                            <ion-button shape="round" fill="outline" id="reset-btn" class="w-full">
+                                <ion-icon name="refresh"></ion-icon>
+                                Reset
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <div class="result mt-6 text-center hidden" id="result">
+                    Your BMI is: <span id="bmi-value" class="font-bold text-lg"></span>
+                    <div class="result-message mt-2 text-gray-700" id="bmi-message"></div>
+                    <div id="bmi-chart" class="w-full h-8 bg-gray-300 rounded mt-4"></div>
+                </div>
+
+                <div class="demo-chart flex justify-between mt-4">
+                    <div class="demo-section flex items-center justify-center h-8 w-full bg-green-500 rounded text-white">Underweight</div>
+                    <div class="demo-section flex items-center justify-center h-8 w-full bg-yellow-500 text-black">Normal</div>
+                    <div class="demo-section flex items-center justify-center h-8 w-full bg-red-500 rounded text-white">Overweight</div>
+                </div>
+
+            </ion-content>
+        </div>
+    </ion-app>
+
+</body>
+
+</html>

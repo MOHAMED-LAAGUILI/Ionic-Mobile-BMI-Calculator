@@ -1,0 +1,6 @@
+add the cdn to start a natice ionic setup
+documentation
+https://ionicframework.com/docs/
+
+ion icons
+https://ionic.io/ionicons/v4
